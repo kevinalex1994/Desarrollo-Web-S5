@@ -1,54 +1,24 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
-  margin: 0;
-  padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería Interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Galería Interactiva</h1>
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    <div class="controls">
+      <input type="url" id="imageUrl" placeholder="Ingresa URL de imagen" />
+      <button id="addImage">Agregar Imagen</button>
+      <button id="removeImage">Eliminar Imagen Seleccionada</button>
+    </div>
 
-h1 {
-  text-align: center;
-}
+    <div id="gallery" class="gallery"></div>
+  </div>
 
-.controls {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-input[type="url"] {
-  flex: 1;
-  padding: 8px;
-}
-
-button {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-}
-
-.gallery img.selected {
-  border: 4px solid #007BFF;
-  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
-  transform: scale(1.03);
-}
+  <script src="script.js"></script>
+</body>
+</html>
